@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>試煉A</title>
+    <link rel="stylesheet" href="css/A3.css">
+</head>
+<body>
+    <div class="container">
+        <button class="prev-btn" id="prevBtn" title="回任務頁面">
+            <img src="src/prev.png" alt="Prev" width="48" height="48">
+        </button>
+        <h1>What's the melody?</h1>
+        
+        <div class="input-section">
+            <div class="input-controls">
+                <div class="input-wrapper">
+                    <div id="note-boxes" class="note-boxes">
+                        <div class="note-box"></div>
+                        <div class="note-box"></div>
+                        <div class="note-box"></div>
+                        <div class="note-box"></div>
+                        <div class="note-box"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="keyboard-container">
+            <div class="keyboard">
+                <div class="keyboard-layout">
+                    <!-- 字母鍵盤 -->
+                    <div class="letter-keyboard">
+                        <div class="black-keys-row">
+                            <div class="black-key black-key-cs"></div>
+                            <div class="black-key black-key-ds"></div>
+                            <div class="black-key black-key-fs"></div>
+                            <div class="black-key black-key-gs"></div>
+                            <div class="black-key black-key-as"></div>
+                        </div>
+                        <div class="keyboard-row">
+                            <button class="key" data-key="Do">Do</button>
+                            <button class="key" data-key="Re">Re</button>
+                            <button class="key" data-key="Mi">Mi</button>
+                            <button class="key" data-key="Fa">Fa</button>
+                            <button class="key" data-key="Sol">Sol</button>
+                            <button class="key" data-key="La">La</button>
+                            <button class="key" data-key="Si">Si</button>
+                        </div>
+                                    <!-- 特殊功能鍵 -->
+                <div class="keyboard-row">
+                    <button id="clear-btn" class="control-btn">Clear</button>
+                    <button class="backspace-btn" id="backspace-btn">Backspace</button>
+                    <button id="submit-btn" class="control-btn submit-btn">Submit</button>
+                </div>
+                    </div>
+                </div>
+        </div>
+
+        <!-- 成功提示窗 -->
+        <div class="success-modal" id="success-modal">
+            <div class="success-content">
+                <div class="success-icon">🎉</div>
+                <div class="success-title">Correct！</div>
+                <div class="success-message">已解鎖相關回憶碎片。</div>
+                <button class="success-btn" id="close-success">Ok</button>
+            </div>
+        </div>
+
+        <!-- 失敗提示窗 -->
+        <div class="error-modal" id="error-modal">
+            <div class="error-content">
+                <div class="error-icon">❌</div>
+                <div class="error-title">Wrong！</div>
+                <div class="error-message">不能有多餘的空格或字符。</div>
+                <button class="error-btn" id="close-error">Retry</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/A3.js"></script>
+</body>
+</html>

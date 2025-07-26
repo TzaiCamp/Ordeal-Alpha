@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'NostalgicDot';
+    src: url('../src/Nosutaru-dotMPlusH-10-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    background: #aaa;
+    font-family: 'Silkscreen', 'NostalgicDot', monospace;
+    margin: 0;
+    padding: 0;
+}
+.task-header {  
+    z-index: 100;
+    width: 100vw;
+    height: 0;
+}
+.task-title {
+    position: absolute;
+    top: 1%;
+    left: 10%;
+    font-size: 6em;
+    letter-spacing: 0.1em;
+    color: #111;
+    margin: 0;
+    text-align: left;
+    z-index: 101;
+}
+.home-btn {
+    position: absolute;
+    top: 5%;
+    left: 85%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 101;
+}
+.home-btn img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.2s, filter 0.2s;
+}
+.home-btn:hover img {
+    transform: scale(1.12);
+    filter: brightness(1.2);
+    content: url('../src/home_hover.png');
+}
+.task-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    width: 90vw;
+    height: 80vh;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+}
+.task-list-area {
+    background: #666;
+    padding: 48px;
+    flex: 1 1 0;
+    max-width: 600px;
+    min-width: 300px;
+    max-height: 500px;
+    min-height: 300px;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.task-note-area {
+    background: #666;
+    padding: 48px;
+    flex: 1 1 0;
+    max-width: 600px;
+    min-width: 300px;
+    max-height: 500px;
+    min-height: 300px;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+}
+.task-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: -10%;
+}
+.task-group-title {
+    color: #fff;
+    font-size: 2.8em;
+    text-align: center;
+    width: 100%;
+    font-family: 'NostalgicDot', 'Silkscreen', monospace;
+    margin-bottom: -10%;
+}
+.task-row {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+.task-icon {
+    width: 60%;
+    height: 60%;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.task-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.2s, filter 0.2s;
+}
+.task-icon:hover img[alt="A1"] {
+    transform: scale(1.12);
+    filter: brightness(1.2);
+    content: url('../src/A1_hover.png');
+}
+.task-icon:hover img[alt="A2"] {
+    transform: scale(1.12);
+    filter: brightness(1.2);
+    content: url('../src/A2_hover.png');
+}
+.task-icon:hover img[alt="A3"] {
+    transform: scale(1.12);
+    filter: brightness(1.2);
+    content: url('../src/A3_hover.png');
+}
+.task-icon:hover img[alt="A4"] {
+    transform: scale(1.12);
+    filter: brightness(1.2);
+    content: url('../src/A4_hover.png');
+}
+.task-icon img.done {
+    filter: none !important;
+    transform: none !important;
+    content: unset !important;
+    cursor: default;
+}
+.task-icon:hover img.done {
+    filter: none !important;
+    transform: none !important;
+    content: unset !important;
+}
+.task-icon img.locked {
+    filter: none !important;
+    transform: none !important;
+    content: unset !important;
+    cursor: not-allowed;
+}
+.task-icon:hover img.locked {
+    filter: none !important;
+    transform: none !important;
+    content: unset !important;
+}
+.note-title {
+    color: #fff;
+    font-size: 2.8em;
+    margin-bottom: 16px;
+    text-align: center;
+    font-family: 'NostalgicDot', 'Silkscreen', monospace;
+}
+.note-content {
+    color: #fff;
+    font-size: 1.8em;
+    margin-left: 32px;
+    font-family: 'NostalgicDot', 'Silkscreen', monospace;
+    text-align: center;
+}
+@media (max-width: 1000px) {
+    .task-main {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        height: auto;
+        position: static;
+        transform: none;
+        top: unset;
+        left: unset;
+    }
+    .task-list-area, .task-note-area {
+        min-width: 280px;
+        width: 90vw;
+        min-height: 280px;
+        height: auto;
+        padding: 24px;
+    }
+} 
