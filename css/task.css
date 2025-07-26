@@ -9,32 +9,19 @@ body {
     font-family: 'Silkscreen', 'NostalgicDot', monospace;
     margin: 0;
     padding: 0;
+    position: relative;
+    min-height: 100vh;
 }
-.task-header {  
-    z-index: 100;
-    width: 100vw;
-    height: 0;
-}
-.task-title {
-    position: absolute;
-    top: 1%;
-    left: 10%;
-    font-size: 6em;
-    letter-spacing: 0.1em;
-    color: #111;
-    margin: 0;
-    text-align: left;
-    z-index: 101;
-}
+
 .home-btn {
     position: absolute;
-    top: 5%;
-    left: 85%;
+    top: 10px;
+    right: 10px;
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
-    z-index: 101;
+    z-index: 10;
 }
 .home-btn img {
     width: 80px;
@@ -58,7 +45,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -45%);
+    transform: translate(-50%, -50%);
 }
 .task-list-area {
     background: #666;
@@ -90,6 +77,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 48px;
+    position: relative;
 }
 .task-group {
     display: flex;
@@ -192,10 +180,10 @@ body {
         align-items: center;
         gap: 32px;
         height: auto;
-        position: static;
-        transform: none;
-        top: unset;
-        left: unset;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     .task-list-area, .task-note-area {
         min-width: 280px;
@@ -203,5 +191,14 @@ body {
         min-height: 280px;
         height: auto;
         padding: 24px;
+        position: relative;
+    }
+    .home-btn {
+        top: 5px;
+        right: 5px;
+    }
+    .home-btn img {
+        width: 50px;
+        height: 50px;
     }
 } 
