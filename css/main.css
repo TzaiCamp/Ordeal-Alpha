@@ -82,7 +82,7 @@ body {
     position: absolute;
     top: 14%;
     left: 18%;
-    font-size: 250%;
+    font-size: 2.5vw;
     font-family: 'Silkscreen', monospace;
     border-bottom: 3px solid #222;
     padding-bottom: 4px;
@@ -92,7 +92,7 @@ body {
 .storyline-title {
     flex: 1;
     text-align: right;
-    font-size: 750%;
+    font-size: 7.5vw;
     font-family: 'Silkscreen', monospace;
     position: absolute;
     top: 12%;
@@ -144,23 +144,17 @@ body {
 .circle-btn.mail-btn {
     /* 位置可根據需求微調 */
     position: absolute;
-    left: 5%;
+    left: 15%;
     bottom: 12%;
     z-index: 10;
 }
 .circle-btn.task-btn {
     position: absolute;
-    left: 17%;
+    left: 27%;
     bottom: 12%;
     z-index: 10;
     /* 讓徽章能正確定位 */
     overflow: visible;
-}
-.circle-btn.package-btn {
-    position: absolute;
-    left: 29%;
-    bottom: 12%;
-    z-index: 10;
 }
 .content-box {
     position: absolute;
@@ -168,8 +162,6 @@ body {
     bottom: 10%;
     width: 40%;
     height: 20%;
-    min-width: unset;
-    min-height: unset;
     background: #555;
     border: 5px solid #343335;
     display: flex;
