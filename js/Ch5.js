@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const lines = [
         '請讀第五章。<br><hr>',
         '第五章完結。<br><hr>',
-        '第一幕完結。<br><hr>'
+        '...等待傳送...<br><hr>'
     ];
     let currentLine = 0;
 
