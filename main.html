@@ -35,11 +35,12 @@
         const A2_done = localStorage.getItem('A2_done') === 'true';
         const A3_done = localStorage.getItem('A3_done') === 'true';
         const A4_done = localStorage.getItem('A4_done') === 'true';
+        const A6_done = localStorage.getItem('A6_done') === 'true';
         const ch3Unlocked = A1_done && A2_done;
         const ch3Locked = !ch3Unlocked;  // 只有兩題都完成才解鎖
         const ch4Unlocked = localStorage.getItem('ch4Unlocked') === 'true';
         const ch4Locked = !ch4Unlocked;
-        const ch5Unlocked = A3_done && A4_done;
+        const ch5Unlocked = A3_done && A4_done && A6_done;
         const ch5Locked = !ch5Unlocked;
 
         // 動態生成章節按鈕

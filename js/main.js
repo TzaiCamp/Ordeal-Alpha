@@ -103,7 +103,7 @@ chapterBtns.forEach(btn => {
 function updateTaskBadge() {
     const badge = document.getElementById('taskBadge');
     if (!badge) return;
-    const tasks = ['A1', 'A2', 'A3', 'A4'];
+    const tasks = ['A1', 'A2', 'A3', 'A4', 'A6'];
     let count = 0;
     tasks.forEach(key => {
         if (localStorage.getItem(key + '_unlocked') === 'true' && localStorage.getItem(key + '_done') !== 'true') {

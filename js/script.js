@@ -9,8 +9,8 @@ document.getElementById('go-main').addEventListener('click', function() {
     localStorage.setItem('mailStatusV1', JSON.stringify(mailStatus));
     alert('你有一封新信件，請到Mail查看！');
     // 上鎖所有任務
-    ['A1','A2','A3','A4'].forEach(k => localStorage.setItem(k+'_unlocked', 'false'));
-    ['A1','A2','A3','A4'].forEach(k => localStorage.setItem(k+'_done', 'false'));
+    ['A1','A2','A3','A4','A6'].forEach(k => localStorage.setItem(k+'_unlocked', 'false'));
+    ['A1','A2','A3','A4','A6'].forEach(k => localStorage.setItem(k+'_done', 'false'));
     // 上鎖Ch2-Ch5
     ['ch2Unlocked','ch3Unlocked','ch4Unlocked','ch5Unlocked'].forEach(k => localStorage.setItem(k, 'false'));
     window.location.href = 'mail.html';

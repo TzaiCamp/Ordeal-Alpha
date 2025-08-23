@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // 點擊 home，解鎖 任務二 並回主選單
             localStorage.setItem('A3_unlocked', 'true');
             localStorage.setItem('A4_unlocked', 'true');
+            localStorage.setItem('A6_unlocked', 'true');
             window.location.href = 'main.html';
         }
     });

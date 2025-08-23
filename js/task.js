@@ -32,7 +32,7 @@ document.querySelectorAll('.task-icon').forEach(icon => {
 
 document.addEventListener('DOMContentLoaded', function() {
     // 檢查 localStorage 標記
-    const doneList = ['A1', 'A2', 'A3', 'A4'];
+    const doneList = ['A1', 'A2', 'A3', 'A4', 'A6'];
     doneList.forEach(key => {
         const img = document.querySelector('.task-icon img[alt="' + key + '"]');
         if (!img) return;

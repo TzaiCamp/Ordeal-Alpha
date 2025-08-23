@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>試煉A</title>
+    <link rel="stylesheet" href="css/A6.css">
+</head>
+<body>
+    <div class="container">
+        <button class="prev-btn" id="prevBtn" title="回任務頁面">
+            <img src="src/prev.png" alt="Prev" width="48" height="48">
+        </button>
+        <h1>What's the order?</h1>
+        
+        <div class="input-section">
+            <div class="input-controls">
+                <div class="input-wrapper">
+                    <div class="input-with-labels">
+                        <div class="left-label">Earliest</div>
+                        <div class="multi-input-container">
+                            <div class="input-group">
+                                <input type="text" class="char-input" id="char1" maxlength="1" readonly>
+                                <div class="input-label">史愛妮</div>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="char-input" id="char2" maxlength="1" readonly>
+                                <div class="input-label">鄭程實</div>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="char-input" id="char3" maxlength="1" readonly>
+                                <div class="input-label">岑氏我</div>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="char-input" id="char4" maxlength="1" readonly>
+                                <div class="input-label">魏亥克</div>
+                            </div>
+                        </div>
+                        <div class="right-label">latest</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="keyboard-container">
+            <div class="keyboard">
+                <div class="keyboard-layout">
+                    <!-- 數字鍵盤 -->
+                    <div class="number-keyboard">
+                        <div class="keyboard-row">
+                            <button class="key" data-key="1">1</button>
+                            <button class="key" data-key="2">2</button>
+                            <button class="key" data-key="3">3</button>
+                        </div>
+                        <div class="keyboard-row">
+                            <button class="key" data-key="4">4</button>
+                            <button class="key" data-key="5">5</button>
+                            <button class="key" data-key="6">6</button>
+                        </div>
+                        <div class="keyboard-row">
+                            <button class="key" data-key="7">7</button>
+                            <button class="key" data-key="8">8</button>
+                            <button class="key" data-key="9">9</button>
+                        </div>
+                        <div class="keyboard-row">
+                            <button class="key" data-key="0">0</button>
+                            <button class="key backspace-key" id="backspace-key">←</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="button-container">
+            <button id="clear-btn" class="control-btn">Clear</button>
+            <button id="submit-btn" class="control-btn submit-btn">Submit</button>
+        </div>
+        <!-- 成功提示窗 -->
+        <div class="success-modal" id="success-modal">
+            <div class="success-content">
+                <div class="success-icon">🎉</div>
+                <div class="success-title">Correct！</div>
+                <div class="success-message">已完成此支線。</div>
+                <button class="success-btn" id="close-success">Ok</button>
+            </div>
+        </div>
+
+        <!-- 失敗提示窗 -->
+        <div class="error-modal" id="error-modal">
+            <div class="error-content">
+                <div class="error-icon">❌</div>
+                <div class="error-title">Wrong！</div>
+                <div class="error-message">不能有多餘的空格或字符。</div>
+                <button class="error-btn" id="close-error">Retry</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/A6.js"></script>
+</body>
+</html>
