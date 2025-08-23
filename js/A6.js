@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100);
         
         // 檢查是否完全等於"1234"（不能有多餘空格或字符）
-        if (inputValue === '1234') {
+        if (inputValue === '1324') {
             // 答對時寫入 localStorage
             localStorage.setItem('A6Cleared', 'true');
             // 顯示成功提示窗
