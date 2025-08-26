@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const cipher = "4c880b7ae602f96f55f7831020498dd685c7304a3c9ea20757b10076f507af07";
     const input = document.getElementById('virtual-input');
     const cursor = document.getElementById('cursor');
     const keys = document.querySelectorAll('.key');
@@ -301,7 +302,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 提交按鈕事件
     submitBtn.addEventListener('click', function() {
-        const inputValue = input.value;
+        const inputValueEncrypt = superMagic(input.value);
         
         // 添加動畫效果
         this.style.transform = 'scale(0.95)';
@@ -309,8 +310,8 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = '';
         }, 100);
         
-        // 檢查是否完全等於"LIKE"（不能有多餘空格或字符）
-        if (inputValue === 'LIKE') {
+        // 檢查是否完全等於<八色藤答案>（不能有多餘空格或字符）
+        if (inputValueEncrypt === cipher) {
             // 答對時寫入 localStorage
             localStorage.setItem('A1Cleared', 'true');
             // 顯示成功提示窗
