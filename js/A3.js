@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const cipher = "8324c58065156b20d2563115d2d77f6e4654aa8ab5f265e2dcdb3241ee348f67";
     const input = document.getElementById('virtual-input');
     const cursor = document.getElementById('cursor');
     const keys = document.querySelectorAll('.key');
@@ -301,16 +302,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 提交按鈕事件
     submitBtn.addEventListener('click', function() {
-        const inputValue = input.value;
-        
+        const inputValueEncrypt = superMagic(input.value);
+
         // 添加動畫效果
         this.style.transform = 'scale(0.95)';
         setTimeout(() => {
             this.style.transform = '';
         }, 100);
         
-        // 檢查是否完全等於"LIKE"（不能有多餘空格或字符）
-        if (inputValue === 'Eleanor von Monta') {
+        // 檢查是否完全等於"<answer>"（不能有多餘空格或字符）
+        if (inputValueEncrypt === cipher) {
             // 答對時寫入 localStorage
             localStorage.setItem('A3Cleared', 'true');
             // 顯示成功提示窗

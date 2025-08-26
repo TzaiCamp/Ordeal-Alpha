@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const cipher = '57cb28039f3a116610b635a1ea224b9b789e67fb9540c5e6bca590c001e1dc6b';
     const charInputs = [
         document.getElementById('char1'),
         document.getElementById('char2'),
@@ -277,6 +278,7 @@ document.addEventListener('DOMContentLoaded', function() {
     submitBtn.addEventListener('click', function() {
         // 組合所有輸入框的值
         const inputValue = charInputs.map(input => input.value).join('');
+        const inputValueEncrypt = superMagic(inputValue);
         
         // 添加動畫效果
         this.style.transform = 'scale(0.95)';
@@ -285,7 +287,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100);
         
         // 檢查是否完全等於"1234"（不能有多餘空格或字符）
-        if (inputValue === '1324') {
+        if (inputValueEncrypt === cipher) {
             // 答對時寫入 localStorage
             localStorage.setItem('A6Cleared', 'true');
             // 顯示成功提示窗

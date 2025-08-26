@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const cipher = "d874739bb8ff59fcc482b9892ef1b15818484907018627da71dac8be2bb32324";
     const input = document.getElementById('virtual-input');
     const cursor = document.getElementById('cursor');
     const keys = document.querySelectorAll('.key');
@@ -301,16 +302,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 提交按鈕事件
     submitBtn.addEventListener('click', function() {
-        const inputValue = input.value;
-        
+        const inputValueEncrypt = superMagic(input.value);
+
         // 添加動畫效果
         this.style.transform = 'scale(0.95)';
         setTimeout(() => {
             this.style.transform = '';
         }, 100);
         
-        // 檢查是否完全等於"LIKE"（不能有多餘空格或字符）
-        if (inputValue === 'metamorphosis') {
+        // 檢查是否完全等於"<answer>"（不能有多餘空格或字符）
+        if (inputValueEncrypt === cipher) {
             // 答對時寫入 localStorage
             localStorage.setItem('A2Cleared', 'true');
             // 顯示成功提示窗

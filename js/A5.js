@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const cipher = 'cefce07c371eee2bdf32f13b2001d36799d0b61e1e5cf5d10ae0600b282b734c';
     const noteBoxes = document.querySelectorAll('.note-box');
     const keys = document.querySelectorAll('.key');
     const backspaceKey = document.querySelector('.backspace-btn');
@@ -57,7 +58,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (submitBtn) {
         submitBtn.addEventListener('click', function() {
             const answer = notes.join(' ');
-            if (answer === 'Si Do Mi Si Sol') { // 範例答案
+            const answerEncrypt = superMagic(answer);
+            if (answerEncrypt === cipher) { // 範例答案
                 successModal.classList.add('show');
             } else {
                 errorModal.classList.add('show');

@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const cipher = '785db6c3293d25b8e4c753047d5789bb8455b3be4784088b0aa9f8f6d7bbe26c';
     const input = document.getElementById('virtual-input');
     const cursor = document.getElementById('cursor');
     const keys = document.querySelectorAll('.key');
@@ -305,7 +306,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 提交按鈕事件
     submitBtn.addEventListener('click', function() {
-        const inputValue = input.value;
+        const inputValueEncrypt = superMagic(input.value);
         
         // 添加動畫效果
         this.style.transform = 'scale(0.95)';
@@ -313,8 +314,8 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = '';
         }, 100);
         
-        // 檢查是否完全等於"LIKE"（不能有多餘空格或字符）
-        if (inputValue === '1992') {
+        // 檢查是否完全等於"<answer>"（不能有多餘空格或字符）
+        if (inputValueEncrypt === cipher) {
             // 顯示成功提示窗
             successModal.classList.add('show');
             // 這裡不再寫入 ch2Unlocked
