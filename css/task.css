@@ -138,6 +138,11 @@ body {
     filter: brightness(1.2);
     content: url('../src/A4_hover.png');
 }
+.task-icon:hover img[alt="A6"] {
+    transform: scale(1.12);
+    filter: brightness(1.2);
+    content: url('../src/A6_hover.png');
+}
 .task-icon img.done {
     filter: none !important;
     transform: none !important;
