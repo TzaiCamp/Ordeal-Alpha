@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'Bitcount Grid Double';
-	src: url('C:/Ordeal_A/src/BitcountGridDouble-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf') format('truetype');
+	src: url('../src/BitcountGridDouble-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf') format('truetype');
 	font-weight: 100 900;
 	font-style: normal;
 	font-display: swap;
